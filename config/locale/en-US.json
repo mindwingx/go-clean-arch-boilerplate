@@ -1,0 +1,24 @@
+{
+  "db_connection_init_failure": "failed to open db connection",
+  "db_connection_close_failure": "failed to close db connection",
+  "db_connection_retrieve_failure": "failed to retrieve db connection",
+  "db_debug_mode_enable": "database debug is enabled",
+  "db_sql_file_load_failure": "error opening directory",
+  "db_sql_dir_scan_failure": "error reading directory contents",
+  "db_migrate_failure": "failed to migrate",
+  "db_sql_file_parse_failure": "failed to read sql file",
+
+  "cache_conn_failure": "failed to connect to redis",
+
+  "rpc_init": "rpc service started...",
+  "rpc_init_err": "rpc service init error",
+  "rpc_listen_err": "rpc service listening error",
+  "rpc_serve_err": "rpc service serve error",
+
+  "http_trusted_proxy": "http set trusted proxy failed",
+  "http_start": "http service started...",
+  "http_start_failure": "service failed on init configs",
+
+  "service_shutdown": "shutting down the service...",
+  "unauthorized": "unauthorized user"
+}
