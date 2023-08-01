@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  core:
+    container_name: core_service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8080:8080"
+    deploy:
+      mode: replicated
+      replicas: 1
+    depends_on:
+      - db
+      - cache
+  db:
+    container_name: database_pgx
+    image: 'postgres:latest'
+    restart: always
+    environment:
+      POSTGRES_USER: someone
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: boilerplate_db
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    ports:
+      - "54320:5432"
+  cache:
+    container_name: cache_redis
+    image: 'redis:7.0.3'
+    ports:
+      - "63790:6379"
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 1
+    volumes:
+      - ./redis_data:/data
+volumes:
+  postgres_data:
+  redis_data:
