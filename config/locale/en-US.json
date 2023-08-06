@@ -1,5 +1,6 @@
 {
   "db_connection_init_failure": "failed to open db connection",
+  "db_connection_close_failure": "failed to close db connection",
   "db_connection_retrieve_failure": "failed to retrieve db connection",
   "db_debug_mode_enable": "database debug is enabled",
   "db_sql_file_load_failure": "error opening directory",

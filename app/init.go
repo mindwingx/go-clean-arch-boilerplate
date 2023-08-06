@@ -22,5 +22,6 @@ func (a *App) Start() {
 	signal.Notify(c, syscall.SIGTERM, syscall.SIGINT)
 	<-c
 
+	a.database.Close()
 	color.Yellow(a.locale.Get("service_shutdown"))
 }

@@ -19,6 +19,7 @@ type SqlAbstraction interface {
 	InitSql()
 	Migrate()
 	Sql() *Sql
+	Close()
 	//Seed()
 }
 
@@ -132,6 +133,16 @@ func (g *Sql) Migrate() {
 
 func (g *Sql) Sql() *Sql {
 	return g
+}
+
+func (g *Sql) Close() {
+	sql, err := g.DB.DB()
+	if err != nil {
+		helper.CustomPanic(g.locale.Get("db_connection_close_failure"), err)
+		return
+	}
+
+	sql.Close()
 }
 
 // HELPER METHOD
