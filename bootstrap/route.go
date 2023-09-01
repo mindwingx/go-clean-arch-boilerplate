@@ -1,4 +1,4 @@
-package app
+package bootstrap
 
 func (a *App) registerRoutes() {
 	http := a.http.Service().Core

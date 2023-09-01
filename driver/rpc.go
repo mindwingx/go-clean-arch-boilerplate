@@ -3,7 +3,7 @@ package driver
 import (
 	"fmt"
 	"github.com/fatih/color"
-	rpcEntity "github.com/mindwingx/go-clean-arch-boilerplate/app/rpc"
+	rpcEntity "github.com/mindwingx/go-clean-arch-boilerplate/bootstrap/rpc"
 	"github.com/mindwingx/go-clean-arch-boilerplate/helper"
 	"net"
 	"net/rpc"

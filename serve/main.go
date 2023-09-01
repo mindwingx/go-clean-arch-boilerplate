@@ -1,9 +1,9 @@
 package main
 
-import "github.com/mindwingx/go-clean-arch-boilerplate/app"
+import "github.com/mindwingx/go-clean-arch-boilerplate/bootstrap"
 
 func main() {
-	service := app.New()
+	service := bootstrap.New()
 	service.InitDrivers()
 	service.InitModules()
 	service.Start()
