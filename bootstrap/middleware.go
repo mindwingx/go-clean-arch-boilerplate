@@ -1,8 +1,8 @@
-package app
+package bootstrap
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/mindwingx/go-clean-arch-boilerplate/app/middleware"
+	"github.com/mindwingx/go-clean-arch-boilerplate/bootstrap/middleware"
 	"github.com/mindwingx/go-clean-arch-boilerplate/helper"
 	"net/http"
 )

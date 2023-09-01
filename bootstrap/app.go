@@ -1,4 +1,4 @@
-package app
+package bootstrap
 
 import (
 	"github.com/mindwingx/go-clean-arch-boilerplate/driver"
